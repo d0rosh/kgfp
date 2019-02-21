@@ -1,0 +1,20 @@
+<header>
+  <div class="logo">
+      <a href="/">
+        <img src="assets/img/logo.png" alt="Logo">
+      </a>
+  </div>
+  <nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/profile" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">Profile</a>
+    <a routerLink="/maps" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">Maps</a>
+  </nav>
+  <div *ngIf="!visibleBtn()" class="auth_nav">
+      <a routerLink="/auth/login">Login</a>
+      <a routerLink="/auth/signup">Sign Up</a>
+  </div>
+  <div class="user-info" *ngIf="visibleBtn()">
+      <mat-icon routerLink="/profile/favorites" class="badge-icon" [matBadge]="countMovies" matBadgeColor="warn">favorite</mat-icon>
+      <app-user-popap [user]='currentUser$' (logout)='logout($event)'></app-user-popap>
+  </div>
+</header>

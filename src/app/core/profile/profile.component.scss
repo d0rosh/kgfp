@@ -1,0 +1,75 @@
+.example-container {
+    width: 100%;
+    min-height: calc(100vh - (200px));
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    height: 100%;
+  }
+  
+  .example-sidenav {
+    padding: 0px;
+  }
+
+  .user-profile {
+      width: 280px;
+      background-size: cover!important;
+      position: relative;
+      height: 240px;
+  }
+
+  .profile-img img {
+      max-width: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+  }
+
+  .profile-text {
+      width: 100%;
+      padding: 7px 0;
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      color: #fff;
+      text-align: center;
+  }
+
+  .menu-btn {
+      width: 64px;
+      height: 64px;
+      outline: none;
+      border: none;
+      background-size: 64px!important;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav a {
+    color: #3f51b5;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 10px 0;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+  }
+
+  .active {
+    color: red!important;
+  }

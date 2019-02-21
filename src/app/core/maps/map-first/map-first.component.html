@@ -1,0 +1,11 @@
+
+<div class="container">
+  <mat-form-field class="w-100">
+    <input matInput placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+  </mat-form-field>
+  <button [ngStyle]="{'background-color': '#3f51b5','color': '#fff'}" mat-raised-button (click)="onClick()">Click</button>
+  <a routerLink="/maps/second-map">Second map</a>
+  <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+  </agm-map>
+</div>

@@ -1,0 +1,11 @@
+<app-header></app-header> 
+
+<div *ngIf="isLoadingPage; else r_outlet">
+    <app-loader></app-loader>
+</div>
+
+<ng-template #r_outlet>
+    <router-outlet *ngIf="!isLoadingPage"></router-outlet>
+</ng-template>
+
+<app-footer></app-footer>

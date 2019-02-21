@@ -1,0 +1,38 @@
+<div class="register-page">
+  <div class="content">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="register-form">
+      <div class="text-center">
+        <h2 class="app-name">Register</h2>
+      </div>
+      <mat-form-field class="w-100">
+          <input matInput placeholder="First name" formControlName="firstName">
+          <!-- <span class="text-danger" *ngIf="form.get('firstName').invalid && form.get('firstName').touched">
+              <span *ngIf="form.get('firstName').errors['required']">First name is required!</span>
+          </span> -->
+      </mat-form-field>
+      <mat-form-field class="w-100">
+          <input matInput type="text" placeholder="Last name" formControlName="lastName">
+          <!-- <span class="text-danger" *ngIf="form.get('lastName').invalid && form.get('lastName').touched">
+              <span *ngIf="form.get('lastName').errors['required']">Last name is required!</span>
+          </span> -->
+      </mat-form-field>
+      <mat-form-field class="w-100">
+          <input matInput placeholder="Email" formControlName="email">
+          <!-- <span class="text-danger" *ngIf="form.get('email').invalid && form.get('email').touched">
+              <span *ngIf="form.get('email').errors['required']">Email is required!</span>
+              <span *ngIf="form.get('email').errors['email']">Email invalid!</span>
+          </span> -->
+      </mat-form-field>
+      <mat-form-field class="w-100">
+          <input matInput  type="password" placeholder="Password" formControlName="password">
+          <!-- <span class="text-danger" *ngIf="form.get('password').invalid && form.get('password').touched">
+              <span *ngIf="form.get('password').errors['required']">Password is required!</span>
+              <span *ngIf="form.get('password').hasError('minlength')">
+                  Password length must be >= 5
+              </span>
+          </span> -->
+      </mat-form-field>
+      <button [disabled]="form.invalid || form.disabled" type="submit" mat-raised-button color="primary" class="w-100">Register</button>
+    </form>
+  </div>
+</div>

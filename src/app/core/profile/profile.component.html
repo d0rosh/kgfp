@@ -1,0 +1,24 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <div class="user-card">
+      <div class="user-profile" style="background: url(assets/img/user-info.jpg) no-repeat;">
+        <div class="profile-img"> <img src="{{currentUser$.avatar}}" alt="user"> </div>
+        <div class="profile-text"><a class="">{{currentUser$.firstName}} {{currentUser$.lastName}}<i class="ti-angle-down"></i></a></div>  
+      </div>
+    </div>
+    <nav>
+      <a routerLink="settings" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Settings</a>
+      <a routerLink="favorites" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Favorites</a>
+      <a routerLink="admin" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Admin</a>
+    </nav>
+  </mat-drawer>
+  <div class="example-sidenav-content">
+    <button class="menu-btn" type="button" mat-button (click)="drawer.toggle()" style="background: url(assets/img/menu-icon.png) no-repeat;">
+    </button>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</mat-drawer-container>
+<!-- {{ currentUser$ | json }} -->

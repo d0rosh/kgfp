@@ -1,0 +1,34 @@
+.wrapper-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.example-card {
+    background: #3f51b5;
+    width: 46%;
+    margin: 2%;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    box-sizing: border-box;
+
+}
+
+.example-card  img {
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+    max-height: 60%;
+}
+
+.text-center {
+    display: block;
+}
+
+.selected {
+    color: red;
+}

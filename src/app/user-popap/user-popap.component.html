@@ -1,0 +1,24 @@
+<div [matMenuTriggerFor]="currentUser">
+    <img *ngIf="user" class="user-icon" src="{{user.avatar}}" alt="Avatar">
+    <!-- <img class="user-icon" src="assets/img/user.png" alt="Avatar"> -->
+  </div>
+
+  <mat-menu [ngClass]="'current-user-modal'" #currentUser xPosition="before">
+    
+    <div class="user-img">
+      <img *ngIf="user" class="user-icon" src="{{user.avatar}}" alt="Avatar">
+      <!-- <img *ngIf="!user" class="user-icon" src="assets/img/user.png" alt="Avatar"> -->
+    </div>
+    <div *ngIf='user' class="user-info">
+        {{user.firstName}}
+        {{user.lastName}}
+    </div>
+    <div class="user-info-btn">
+        <button mat-menu-item routerLink="/profile">
+            Profile
+        </button>
+        <button mat-menu-item (click)="onClick()">
+          Logout
+        </button>
+    </div>
+  </mat-menu>

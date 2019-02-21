@@ -1,0 +1,23 @@
+<div class="wrapper-card" *ngIf="movies.length; else loader">
+  <mat-card *ngFor="let movie of movies" class="example-card">
+    <mat-card-header class="text-center">
+      <mat-card-title>{{ movie.Title }}</mat-card-title>
+      <mat-card-subtitle>{{ movie.Year }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{movie.Poster}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>List ganres</p>
+      <ul>
+        <li *ngFor="let genre of movie.Genre">{{genre}}</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button (click)="deleteMovie(movie)">Delete</a>
+      <a mat-button [routerLink]="['../../movie', movie.imdbID]">Details</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>
