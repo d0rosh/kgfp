@@ -22,7 +22,7 @@ import { MapSecondComponent } from './map-second/map-second.component';
     ReactiveFormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAo10UdjOmDP9KaVpVvzng85sNLbFM79lw',
+      apiKey: 'api_key',
       libraries: ['places']
     }),
     MatButtonModule,
